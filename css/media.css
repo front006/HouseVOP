@@ -1,0 +1,139 @@
+@media (max-width: 992px) {
+	.header__nav {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100vh;
+		min-width: 250px;
+		padding: 50px;
+		width: 80%;
+		z-index: 1000;
+		overflow-y: auto;
+		background-color: #000;
+		box-shadow: 0 0 5px #888;
+		visibility: hidden;
+		transform: translateX(-120%);
+		transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+	}
+
+	.header__nav--active {
+		visibility: visible;
+		transform: none;
+	}
+
+	.header__nav .nav__list {
+		flex-direction: column;
+	}
+
+	.header__nav .nav__item:not(:last-child) {
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+
+	.header__nav .nav__link {
+		font-size: 20px;
+	}
+
+	.advantages {
+		display: none;
+	}
+
+	.cards {
+		grid-template-columns: repeat(1, 100^);
+	}
+
+	.watch {
+		display: none;
+	}
+
+	.questions {
+		display: none;
+	}
+
+	.footer {
+		padding-top: 36px;
+		padding-bottom: 25px;
+	}
+
+	.footer__grid {
+		grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+		gap: 40px 30px;
+	}
+
+	.burger {
+		position: relative;
+		display: block;
+		width: 40px;
+		height: 40px;
+	}
+
+	.burger__line {
+		position: absolute;
+		left: 50%;
+		width: 20px;
+		height: 2px;
+		background-color: #fff;
+		transform: translateX(-50%);
+		transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out,
+			top 0.3s ease-in-out, left 0.3s ease-in-out;
+	}
+
+	.burger__line:nth-child(2) {
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.burger__line:first-child {
+		top: 13px;
+	}
+
+	.burger__line:last-child {
+		bottom: 13px;
+	}
+
+	.burger--active .burger__line:nth-child(2) {
+		opacity: 0;
+	}
+
+	.burger--active .burger__line:first-child {
+		top: 50%;
+		left: 25%;
+		transform: rotate(45deg);
+		transform-origin: center;
+	}
+
+	.burger--active .burger__line:last-child {
+		bottom: auto;
+		top: 50%;
+		left: 25%;
+		transform: rotate(-45deg);
+		transform-origin: center;
+	}
+}
+
+@media (max-width: 768px) {
+	
+}
+
+@media (max-width: 576px) {
+	:root {
+		--gap: 15px;
+	}
+
+	.header {
+		padding: 14px 0;
+	}
+
+	.header__logo {
+		width: 80px;
+	}
+
+	.appartaments {
+		display: grid;
+		grid-template-columns: repeat(1, 100%);
+	}
+
+	.contact {
+		display: none
+	}
+}
